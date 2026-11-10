@@ -12,13 +12,13 @@
 ========================================= */
 
 :root {
-    --black: #05030b;
-    --dark-purple: #160329;
-    --purple: #7200ff;
-    --gold: #d6ad60;
-    --light-gold: #f5dfac;
-    --white: #f5f1fa;
-    --muted: #aaa3b5;
+    --black: #12022b;
+    --dark-purple: #12022b;
+    --purple: #555310;
+    --gold: #be7e09;
+    --light-gold: #12022b;
+    --white: #f2ca84;
+    --muted: #12022b;
 }
 
 * {
@@ -31,7 +31,7 @@
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     background:
-        radial-gradient(ellipse at 15% 10%, rgba(114, 0, 255, .18), transparent 35%),
+        radial-gradient(ellipse at 15% 10%, rgba(3, 29, 60, 0.816), transparent 35%),
         radial-gradient(ellipse at 85% 45%, rgba(214, 173, 96, .09), transparent 35%),
         var(--black);
     color: var(--white);
@@ -50,8 +50,8 @@ body::before {
     z-index: -1;
     pointer-events: none;
     background:
-        radial-gradient(circle at 30% 30%, rgba(114, 0, 255, .18), transparent 25%),
-        radial-gradient(circle at 70% 70%, rgba(214, 173, 96, .12), transparent 25%);
+        radial-gradient(circle at 30% 30%, rgba(3, 29, 60, 0.816), transparent 25%),
+        radial-gradient(circle at 70% 70%, rgba(3, 29, 60, 0.816), transparent 25%);
     filter: blur(75px);
     animation: backgroundGlow 14s ease-in-out infinite alternate;
 }
@@ -96,8 +96,7 @@ body::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(5, 3, 11, .8);
-    border-bottom: 1px solid rgba(214, 173, 96, .2);
+    background: #ffffff87;
     backdrop-filter: blur(18px);
     position: sticky;
     top: 0;
@@ -117,12 +116,13 @@ body::after {
 }
 
 .nav-links a {
-    color: var(--white);
+    color: var(--black);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     transition: .3s ease;
     position: relative;
+    font-weight: 600;
 }
 
 .nav-links a::after {
@@ -156,7 +156,7 @@ body::after {
     justify-content: center;
     align-items: flex-start;
     background:
-        radial-gradient(ellipse at 80% 30%, rgba(114, 0, 255, .15), transparent 45%);
+        radial-gradient(ellipse at 80% 30%, rgba(0, 0, 0, 0.519), transparent 45%);
 }
 
 .profile-home h1 {
@@ -166,9 +166,9 @@ body::after {
     margin-bottom: 25px;
     background: linear-gradient(
         120deg,
-        #fff,
+        #FFFFFF,
         var(--gold),
-        #fff0c2
+        #FFFFFF
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -184,9 +184,10 @@ body::after {
 }
 
 .profile-home p {
-    color: var(--muted);
+    color: #FFFFFF;
     max-width: 650px;
     font-size: 17px;
+    font-weight: 600;
 }
 
 /* =========================================
@@ -212,29 +213,32 @@ body::after {
     font-size: 2.5rem;
     color: var(--gold);
     margin-bottom: 25px;
+    text-align: justify;
 }
 
 .profile-about p,
 .profile-service p,
 .profile-contact p {
-    color: var(--muted);
+    color: #FFFFFF;
     font-size: 15px;
     line-height: 2;
+    text-align: justify;
+    font-weight: 500;
 }
 
 .profile-image img {
-    width: 300px;
+    width: 500px;
     height: 350px;
     object-fit: cover;
     border-radius: 20px;
     border: 2px solid rgba(214, 173, 96, .5);
-    box-shadow: 0 0 40px rgba(114, 0, 255, .25);
+    box-shadow: 0 0 40px rgba(3, 29, 60, 0.816);
     transition: .5s ease;
 }
 
 .profile-image img:hover {
     transform: scale(1.04);
-    box-shadow: 0 0 50px rgba(214, 173, 96, .25);
+    box-shadow: 0 0 50px rgba(3, 29, 60, 0.816);
 }
 
 /* =========================================
@@ -300,7 +304,7 @@ body::after {
 }
 
 .project p {
-    color: var(--muted);
+    color: #FFFFFF;
     margin-top: 12px;
 }
 
@@ -341,7 +345,7 @@ body::after {
 
 .profile-contact li {
     margin: 12px 0;
-    color: var(--muted);
+    color: #FFFFFF;
 }
 
 .profile-contact a {
@@ -368,6 +372,7 @@ body::after {
 .footer p {
     color: var(--muted);
     font-size: 13px;
+    color: #FFFFFF;
 }
 
 /* =========================================
@@ -476,7 +481,18 @@ body::after {
             <p>Welcome to the profile page. Here you can find information about our team and our mission.</p>
         </div>
     </section>
+        
 
+    <section class="profile">
+        <div class="profile-about">
+            <h1>About</h1>
+            <p>I am a passionate software developer and digital entrepreneur with practical experience in frontend and backend development. I specialize in building responsive web applications using React, JavaScript, HTML, CSS, and Tailwind CSS, alongside developing backend systems and REST APIs with PHP, Laravel, Node.js, and Express.js. I also have experience in MySQL database management, third-party API integration, Paystack payment integration, desktop application development with Electron.js, and application deployment and troubleshooting. I enjoy solving technical problems, turning ideas into functional digital products, and continuously improving my skills to build efficient, reliable, and user-friendly solutions.</p>
+        </div>
+
+        <div class="profile-image">
+            <img src="images/profile.jpg" alt="Profile Image" width="400" height="120">
+        </div>
+    </section>
     <section class="profile">
         <div class="project">
     <h2>Project 1</h2>
